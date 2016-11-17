@@ -24,7 +24,7 @@ RUN apk add --update curl wget git mysql mysql-client \
     mkdir -p /var/lib/mysql && \
     mkdir -p /etc/mysql/conf.d && \
     mkdir -p /etc/nginx/conf.d && \
-    mkdir -p /var/run/mysql/ && \
+    mkdir -p /var/run/mysqld/ && \
     mkdir -p /var/run/php5-fpm/ && \
     mkdir -p /etc/php5/fpm.d/ && \
     rm -rf /var/cache/apk/*
@@ -37,7 +37,10 @@ ADD conf/php/default.conf /etc/php5/fpm.d/
 # ADD conf/php/php-fpm.conf /etc/php/
 ADD conf/mysql/my.cnf /etc/mysql/
 ADD util/run /
+ADD util/run_mysql.sh /
+ADD backups/ /var/backups/
 RUN chmod +x /run
+RUN chmod +x /run_mysql.sh
 
 # Poke holes
 EXPOSE 80
