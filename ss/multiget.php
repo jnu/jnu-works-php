@@ -40,7 +40,7 @@
 //////
 
 $host_whitelist = array(
-	'synie' => 'http://localhost/sandbox/ss/synie.php'
+	'synie' => 'http://localhost/synie.php'
 );
 
 function json2reqstr($request, $ignore_key) {
