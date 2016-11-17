@@ -16,7 +16,7 @@
 // {"data" : "source:synie,x:meta", "tree" : "source:synie,x:tree"}
 //
 // This will execute the requests:
-// 
+//
 // /sandbox/ss/synie.php?x=meta
 // /sandbox/ss/synie.php?x=tree
 //
@@ -26,7 +26,7 @@
 //	"meta" :
 //		{
 //			... // return object from first request
-//		}, 
+//		},
 //  "tree" :
 //		{
 //			... // return object from second request
@@ -40,7 +40,7 @@
 //////
 
 $host_whitelist = array(
-	'synie' => 'http://joenoodles.com/sandbox/ss/synie.php'
+	'synie' => 'http://localhost/sandbox/ss/synie.php'
 );
 
 function json2reqstr($request, $ignore_key) {
