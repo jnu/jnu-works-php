@@ -7,7 +7,7 @@
 # If data dir exists, leave as is, otherwise create stuff.
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-/run_mysql.sh
+/run_mysql.sh &
 
 # TODO set up users and databases as expected by scripts
 

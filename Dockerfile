@@ -17,7 +17,7 @@ RUN echo "http://dl-1.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories
 RUN apk add --update curl wget git mysql mysql-client \
     bash nginx ca-certificates \
     php5-fpm php5-json php5-zlib php5-xml php5-pdo php5-phar php5-openssl \
-    php5-pdo_mysql php5-mysqli \
+    php5-pdo_mysql php5-mysqli php5-mysql \
     php5-gd php5-iconv php5-mcrypt \
     php5-curl php5-openssl php5-json php5-dom php5-ctype && \
     apk add -u musl && \

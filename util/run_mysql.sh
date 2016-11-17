@@ -5,7 +5,7 @@ MYSQL_ROOT_PASSWORD=Highlandrose1!
 
 if [ -d /var/lib/mysql/mysql ]; then
   echo "[i] MySQL directory already present, skipping creation"
-  /usr/bin/mysqld --user=root --console &
+  /usr/bin/mysqld --user=root --console
 else
   echo "[i] MySQL data directory not found, restoring from backups"
 
