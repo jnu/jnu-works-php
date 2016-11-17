@@ -26,14 +26,14 @@ RUN apk add --update curl wget git mysql mysql-client \
     mkdir -p /etc/nginx/conf.d && \
     mkdir -p /var/run/mysql/ && \
     mkdir -p /var/run/php5-fpm/ && \
-    mkdir -p /etc/php5/fpm/pool.d/ && \
+    mkdir -p /etc/php5/fpm.d/ && \
     rm -rf /var/cache/apk/*
 
 # Add config files
 ADD conf/nginx/nginx.conf /etc/nginx/
 ADD conf/nginx/default.conf /etc/nginx/conf.d/
 ADD conf/nginx/fastcgi_params /etc/nginx/
-ADD conf/php/default.conf /etc/php5/fpm/pool.d/
+ADD conf/php/default.conf /etc/php5/fpm.d/
 # ADD conf/php/php-fpm.conf /etc/php/
 ADD conf/mysql/my.cnf /etc/mysql/
 ADD util/run /
